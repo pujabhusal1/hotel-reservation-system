@@ -1,14 +1,13 @@
-
 <?php
 if (isset($_POST["book"])) {
     $name = $_POST["name"];
-    $email= $_POST["email"];
+    $email = $_POST["email"];
     $phonenumber = $_POST["phonenumber"];
     $roomcount = $_POST["roomcount"];
     $roomtype = $_POST["roomtype"];
-    $checkindate= $_POST["checkoutdate"];
+    $checkindate = $_POST["checkindate"];
     $checkoutdate = $_POST["checkoutdate"];
-
+    $remarks = $_POST["remarks"];
 
     $host = "localhost";
     $user = "root";
@@ -19,19 +18,20 @@ if (isset($_POST["book"])) {
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
+    $sql = "insert into book (`Name`, `Email`, `Phone Number`, `Room Count`, `Room Type`, `Checkin_Date`, `Checkout`, `Remarks`) VALUES ('$name', '$email', '$phonenumber', '$roomcount', '$roomtype', '$checkindate', '$checkoutdate', '$remarks')";
 
-    $sql =
-        "insert into users values('".$name."','".$email."','".$phonenumber."','".$roomcount."','".roomtype."','".roomtype."','".checkindate."','".checkoutdate."')";
-
+    // Add this line to print the query
     if (mysqli_query($conn, $sql)) {
-        echo "booking sucess";
-    } else {
-        echo "booking failed" . mysqli_error($conn);
+        // Code to execute if the query is successful
+        echo "Successfully booked.";
     }
-}
+    }
 
-mysqli_close($conn);
-exit(); // Stop executing the rest of the code
+    mysqli_close($conn); // Close the database connection
+    exit(); // Stop executing the rest of the code
+ 
 
 
 ?>
+
+
