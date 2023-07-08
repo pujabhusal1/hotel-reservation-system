@@ -1,5 +1,5 @@
 <?php
-include("register.php");
+include("signup_controller.php");
 
 
 

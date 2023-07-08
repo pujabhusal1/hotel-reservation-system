@@ -8,7 +8,7 @@
 <body>
   <div class="container">
     <h2>Login Form</h2>
-    <form action="home.php" method="post">
+    <form action="login_controller.php" method="post">
       <div class="form-group">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
