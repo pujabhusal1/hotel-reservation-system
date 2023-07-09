@@ -58,7 +58,6 @@ body {
   align-items: center;
   flex-wrap: wrap;
   margin-top: -20px; /* Apply negative margin to move the container up */
-  flex-direction: column;
 }
 
 .text-column {

@@ -37,28 +37,27 @@
       <img src="images/elephant.jpg" alt="Image 1">
     </div>
   </div>
-  <style>
-  .grid-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .grid-item {
-    margin-bottom: 20px; /* Adjust the margin as needed */
-  }
-</style>
 
-<div class="grid-container">
+
+<div class="container">
+  <div class="title">
+    <title>Services</title>
+</div>
+</div>
+
+
+
+  <div class="grid-container">
   <div class="grid-item">
     <img src="images/1.jpg" alt="Image 1">
     <p>Item 1</p>
-    <a href="book.php" class="book-now-button">Book Now</a>
+    <a href="book.php" class="book-now-button">Book Now</a></br>
   </div>
+  
   <div class="grid-item">
     <img src="images/2.jpg" alt="Image 2">
     <p>Item 2</p>
-    <a href="book.php" class="book-now-button">Book Now</a>
+    <a href="book.php" class="book-now-button">Book Now</a></br>
   </div>
   <div class="grid-item">
     <img src="images/3.jpg" alt="Image 3">
@@ -81,9 +80,6 @@
     <a href="book.php" class="book-now-button">Book Now</a>
   </div>
 </div>
-
-</div>
-
 
 </div>
 
