@@ -77,7 +77,6 @@
     </ul>
   </div>
 
-  <img class="resort-image" src="images/I.jpg" alt="New View Resorts Image">
 </div>
 </body>
 </html>
