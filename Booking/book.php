@@ -40,7 +40,7 @@
         <input type="text" id="remarks" name="remarks" required>
       </div>
       <div class="form-group">
-        <button type="book" name="book">Book</button>
+        <button type="book" name="book">submit</button>
       </div>
     </form>
   </div>
