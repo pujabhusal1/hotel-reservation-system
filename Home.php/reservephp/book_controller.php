@@ -20,7 +20,7 @@ if (isset($_POST["submit"])) {
     }
     $sql = "insert into book (`Name`, `Email`, `PhoneNumber`, `RoomCount`, `RoomType`, `Checkin_Date`, `Checkout_Date`, `Remarks`) VALUES ('$name', '$email', '$phonenumber', '$roomcount', '$roomtype', '$checkindate', '$checkoutdate', '$remarks')";
 
-    // Add this line to print the query
+    
     if (mysqli_query($conn, $sql)) {
         // Code to execute if the query is successful
         echo "Successfully booked.";
