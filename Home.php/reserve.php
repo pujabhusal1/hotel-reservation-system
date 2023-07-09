@@ -108,7 +108,7 @@
     <div class="grid-column">
       <div class="grid-items">
         <img src="images/5.jpg" alt="Image 5">
-        <p style="font-size: 32px;">Item 5</p>
+        <p>Item 5</p>
         <a href="" class="book-now-button">Book Now</a>
       </div>
     </div>
@@ -116,7 +116,7 @@
     <div class="grid-column">
       <div class="grid-items">
         <img src="images/3.jpg" alt="Image 3">
-        <p>Item 3<br>RS 2500</p>
+        <p>RS 2500</p>
         <a href="" class="book-now-button">Book Now</a>
       </div>
     </div>
