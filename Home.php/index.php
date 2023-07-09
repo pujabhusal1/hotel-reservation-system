@@ -14,7 +14,7 @@
   <a href="#">Home</a>
   <a href="aboutus.php">Aboutus</a>
   <a href="#">Services</a>
-  <a href="#">Booking</a>
+  <a href="reserve.php">Booking</a>
   <a href="#">Signup</a>
   <a href="#">Login</a>
   <a href="#">Contact</a>
