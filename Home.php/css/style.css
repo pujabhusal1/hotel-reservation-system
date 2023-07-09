@@ -58,6 +58,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   margin-top: -20px; /* Apply negative margin to move the container up */
+  flex-direction: column;
 }
 
 .text-column {
@@ -90,6 +91,31 @@ img {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  grid-gap: 10px; /* Gap between grid items */
+}
+
+.grid-item {
+  background-color: #ddd;
+  padding: 20px;
+}
+
+.book-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 
 
 
