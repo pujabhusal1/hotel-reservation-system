@@ -1,9 +1,15 @@
 <?php
-if (isset($_POST["submit"])) {
-    $name = $_POST["name"];
+/*
+echo '<pre>';
+var_dump($_POST);
+echo '</pre>';
+*/
+
+
+    $name = $_POST["name"]; 
     $email = $_POST["email"];
     $message = $_POST["message"];
-
+   
     $host = "localhost";
     $user = "root";
     $pass = "";
@@ -14,15 +20,18 @@ if (isset($_POST["submit"])) {
         die("Connection failed: " . mysqli_connect_error());
     }
     
-    $sql = "insert into contact ('name', 'email', 'message') value ('$name', '$email', '$message')";
+    $sql = "insert into contact (`name`, `email`, `message`) values ('$name', '$email', '$message')";
     
+
     if (mysqli_query($conn, $sql)) {
         // Code to execute if the query is successful
         echo "Message sent successfully.";
     }
-   
-
-    mysqli_close($conn); // Close the database connection
+    else 
+    {
+        echo "Message failed to send" . mysqli_error($conn);
+    }
+   mysqli_close($conn); // Close the database connection
     
-}
+
 ?>

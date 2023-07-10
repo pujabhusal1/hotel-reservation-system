@@ -57,7 +57,7 @@
 <body>
   <div class="container">
     <h2>Contact Us</h2>
-    <form action="contact_controller.php" method="post">
+    <form action="contact_controller.php" method="POST">
       <div class="form-group">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
