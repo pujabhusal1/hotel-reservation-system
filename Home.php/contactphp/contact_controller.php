@@ -25,7 +25,7 @@ echo '</pre>';
 
     if (mysqli_query($conn, $sql)) {
         // Code to execute if the query is successful
-        echo "Message sent successfully.";
+        echo "Thank you for messaging. We will reply soon";
     }
     else 
     {
