@@ -1,4 +1,3 @@
-
 <?php
 if (isset($_POST["submit"])) {
     $name = $_POST["username"];
@@ -15,28 +14,18 @@ if (isset($_POST["submit"])) {
     }
 
     $sql =
-        "Select * from users where username ='" .
+        "SELECT * FROM users WHERE username ='" .
         $name .
-        "' && password = '" .
+        "' AND password = '" .
         $password .
         "'";
-    // Select * from users where username == "username" and password == "password"
 
     if (mysqli_query($conn, $sql)) {
         $result = mysqli_query($conn, $sql);
         $num_rows = mysqli_num_rows($result);
         if ($num_rows > 0) {
-            echo "login success";
-        } else {
-            echo "loginfailed";
+            // Redirect to allbooking.php inside allbooking folder
+            header("Location:reserve/book.php");
+            exit(); // Make sure to exit after the redirect
         }
-    } else {
-        echo "Error Login failed" . mysqli_error($conn);
-    }
-}
-
-mysqli_close($conn);
-exit(); // Stop executing the rest of the code
-
-
 ?>

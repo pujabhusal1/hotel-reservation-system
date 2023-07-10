@@ -4,8 +4,9 @@
   <title>Contact Us</title>
   <style>
     body {
+  
       font-family: Arial, sans-serif;
-      background-image: url('images/Cu.jpg');
+      background-image: url('contact.jpg');
       background-size: cover;
       background-position: center;
       margin: 0;

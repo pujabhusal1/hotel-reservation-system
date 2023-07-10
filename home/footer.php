@@ -22,7 +22,7 @@
 
     .footer-icons a {
       color: white;
-      margin-right: 10px;
+      margin-right: 50px;
       text-decoration: none;
       font-size: 20px;
     }

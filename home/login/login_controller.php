@@ -25,8 +25,12 @@ if (isset($_POST["submit"])) {
     if (mysqli_query($conn, $sql)) {
         $result = mysqli_query($conn, $sql);
         $num_rows = mysqli_num_rows($result);
+      
         if ($num_rows > 0) {
             echo "login success";
+            if ($name == "admin"){
+                echo "login admin";
+              }
         } else {
             echo "loginfailed";
         }

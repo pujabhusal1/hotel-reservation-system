@@ -73,7 +73,7 @@
       <div class="grid-items">
         <img src="images/6.jpg" alt="Image 6">
         <p>Item 6</p>
-        <a href="reservephp/book.php" class="book-now-button">Book Now</a>
+        <a href="reserve/book.php" class="book-now-button">Book Now</a>
       </div>
     </div>
   
@@ -81,7 +81,7 @@
       <div class="grid-items">
         <img src="images/2.jpg" alt="Image 2">
         <p>Item 2</p>
-        <a href="reservephp/book.php" class="book-now-button">Book Now</a>
+        <a href="reserve/book.php" class="book-now-button">Book Now</a>
       </div>
     </div>
   </div>
@@ -91,7 +91,7 @@
       <div class="grid-items">
         <img src="images/1.jpg" alt="Image 1">
         <p>Item 1</p>
-        <a href="reservephp/book.php" class="book-now-button">Book Now</a>
+        <a href="reserve/book.php" class="book-now-button">Book Now</a>
       </div>
     </div>
   
@@ -99,7 +99,7 @@
       <div class="grid-items">
         <img src="images/4.jpg" alt="Image 4">
         <p>Item 4</p>
-        <a href="reservephp/book.php" class="book-now-button">Book Now</a>
+        <a href="reserve/book.php" class="book-now-button">Book Now</a>
       </div>
     </div>
   </div>
@@ -109,7 +109,7 @@
       <div class="grid-items">
         <img src="images/5.jpg" alt="Image 5">
         <p>Item 5</p>
-        <a href="reservephp/book.php" class="book-now-button">Book Now</a>
+        <a href="reserve/book.php" class="book-now-button">Book Now</a>
       </div>
     </div>
   
@@ -117,7 +117,7 @@
       <div class="grid-items">
         <img src="images/3.jpg" alt="Image 3">
         <p>RS 2500</p>
-        <a href="reservephp/book.php" class="book-now-button">Book Now</a>
+        <a href="reserve/book.php" class="book-now-button">Book Now</a>
       </div>
     </div>
   </div>
