@@ -15,6 +15,7 @@
             border-radius: 5px;
             background-color: #fff;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            
         }
         .container h2 {
             text-align: center;
@@ -55,6 +56,9 @@
             background-color: #45a049;
         }
     </style>
+
+
+
 </head>
 <body>
     <div class="container">
