@@ -16,7 +16,7 @@ if (isset($_POST["submit"])) {
     }
 
     $sql =
-        "insert into users values('".$email."','".$name."','".$password."')";
+        "insert into users values('".$email."','".$name."','".$password."', 0)";
 
     if (mysqli_query($conn, $sql)) {
         echo "Signup successfull";
