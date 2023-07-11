@@ -32,6 +32,14 @@ if (isset($_POST["submit"])) {
                 header("Location: http://localhost/Git/hotel-reservation-system/home/allbooking/allbooking.php");
                  exit();
               }
+              else {
+                $queryParams = http_build_query(['name' => $name]);
+                $redirectUrl = 'http://localhost/Git/hotel-reservation-system/home/allbooking/individual_booking.php?' . $queryParams;
+                // Redirect to the receiver file
+                header('Location: ' . $redirectUrl);
+                exit();
+
+            }
         } else {
             echo "loginfailed";
         }
