@@ -6,16 +6,16 @@
     body {
   
       font-family: Arial, sans-serif;
-      background-image: url('contact.jpg');
+      background-image: url('delux.jpg');
       background-size: cover;
       background-position: center;
       margin: 0;
       padding: 0;
     }
     .container {
-      max-width: 500px;
+      max-width: 400px;
       margin: 50px auto;
-      padding: 40px;
+      padding: 30px;
       background-color: #f4f4f4;
       border-radius: 5px;
     }
@@ -43,7 +43,7 @@
     .form-group button {
       display: block;
       width: 100%;
-      padding: 10px 20px;
+      padding: 10px 0px;
       background-color: #4CAF50;
       color: white;
       border: none;

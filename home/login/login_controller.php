@@ -29,7 +29,8 @@ if (isset($_POST["submit"])) {
         if ($num_rows > 0) {
             echo "login success";
             if ($name == "admin"){
-                echo "login admin";
+                header("Location: http://localhost/Git/hotel-reservation-system/home/allbooking/allbooking.php");
+                 exit();
               }
         } else {
             echo "loginfailed";

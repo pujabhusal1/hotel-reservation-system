@@ -1,6 +1,6 @@
 
 <?php
-if (isset($_POST["submit"])) {
+if (isset($_POST["submit"])){
     $email = $_POST["email"];
     $name = $_POST["username"];
     $password = $_POST["password"];

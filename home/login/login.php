@@ -17,9 +17,9 @@
         }
 
         .container {
-            width: 300px;
+            width: 400px;
             background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
         }
