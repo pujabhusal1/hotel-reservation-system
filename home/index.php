@@ -25,6 +25,8 @@
   <a href="signup/signup.php">Signup</a>
   <a href="login/login.php">Login</a>
   <a href="contact/contact.php">Contact</a>
+  <a href="checkin/checkin.php">Checkin</a>
+  <a href="#">Checkout</a>
 </div>
 
 <div class="content-section">

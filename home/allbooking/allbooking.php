@@ -1,3 +1,42 @@
+<style>
+.dashboard {
+  padding: 20px;
+}
+
+.dashboard h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #333;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  border: 1px solid #333;
+  padding: 8px;
+}
+
+.table-header {
+  background-color: #4287f5;
+  color: #fff;
+}
+
+.table-row-even {
+  background-color: #f9f9f9;
+}
+
+.table-row-odd {
+  background-color: #ffffff;
+}
+</style>
+
+
+
 <?php
 $host = "localhost";
 $user = "root";
@@ -15,28 +54,34 @@ if (mysqli_query($conn, $sql)) {
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
         // Start building the HTML table
-        $html = "<table style='border-collapse: collapse; width: 100%;'>";
-       
-        // Create table headers using the column names
-        $html .= "<tr style='background-color: #006400;'>";
+        $html = "<div class='dashboard'>
+                    <h1>Dashboard</h1>
+                    <table class='dashboard-table'>
+                        <thead>
+                            <tr class='table-header'>
+                                ";
         while ($field = mysqli_fetch_field($result)) {
-            $html .= "<th style='border: 1px solid #ddd; padding: 8px; background-color: #4287f5; color: #fff;'>" . $field->name . "</th>";
+            $html .= "<th>" . $field->name . "</th>";
         }
-        $html .= "</tr>";
+        $html .= "</tr>
+                        </thead>
+                        <tbody>";
        
         // Fetch and add data rows to the table
         $rowNum = 0;
         while ($row = mysqli_fetch_assoc($result)) {
-            $html .= "<tr style='background-color: " . ($rowNum % 2 == 0 ? "#f9f9f9" : "#ffffff") . ";'>";
+            $html .= "<tr class='" . ($rowNum % 2 == 0 ? "table-row-even" : "table-row-odd") . "'>";
             foreach ($row as $value) {
-                $html .= "<td style='border: 1px solid #ddd; padding: 8px; color: #333;'>" . $value . "</td>";
+                $html .= "<td>" . $value . "</td>";
             }
             $html .= "</tr>";
             $rowNum++;
         }
        
-        // Close the table
-        $html .= "</table>";
+        // Close the table and dashboard div
+        $html .= "</tbody>
+                </table>
+            </div>";
        
         // Output or store the generated HTML table
         echo $html;
