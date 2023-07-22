@@ -17,12 +17,15 @@
         }
 
         .container {
-            width: 500px;
+            width: 400px;
+            height: 400px; /* Adjust the height as needed */
             background-color: rgba(255, 255, 255, 0.8);
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         h2 {
@@ -31,7 +34,8 @@
         }
 
         input[type="text"],
-        input[type="password"] {
+        input[type="password"],
+        input[type="number"] {
             width: 100%;
             padding: 8px;
             margin-bottom: 15px;
@@ -65,7 +69,7 @@
     
       <div class="form-group">
         <label for="phoneno">Phoneno:</label>
-        <input type="num" id="phoneno" name="phoneno" required>
+        <input type="number" id="phoneno" name="phoneno" required>
       </div>
       <div class="form-group">
         <button type="submit" name="submit">checkin</button>
