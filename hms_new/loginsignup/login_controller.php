@@ -34,7 +34,8 @@ if (isset($_POST["submit"])) {
         echo $password;
         if ($password == $row['password']) {
             // Login successful
-            echo "Login successful";
+            header("Location:reservation.php");
+            exit(); // Make sure to exit after the redirect
             // Perform additional actions (e.g., set session variables, redirect to dashboard, etc.)
         } else {
             // Login failed, incorrect password
