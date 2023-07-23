@@ -32,8 +32,7 @@ if (isset($_POST["submit"])) {
         // Verify the hashed password
         echo $row['password']; // RL
         echo $password;
-        echo password_verify($password, $row['password']);
-        if (password_verify($password, $row['password'])) {
+        if ($password == $row['password']) {
             // Login successful
             echo "Login successful";
             // Perform additional actions (e.g., set session variables, redirect to dashboard, etc.)
