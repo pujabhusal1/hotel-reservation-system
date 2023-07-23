@@ -8,7 +8,6 @@ if (isset($_POST["submit"])) {
     $password = $_POST["password"];
 
     echo $emailOrUsername; // RL
-    echo $password; // RL
 
     $host = "localhost";
     $user = "root";
@@ -32,6 +31,8 @@ if (isset($_POST["submit"])) {
     if ($row = mysqli_fetch_assoc($result)) {
         // Verify the hashed password
         echo $row['password']; // RL
+        echo $password;
+        echo password_verify($password, $row['password']);
         if (password_verify($password, $row['password'])) {
             // Login successful
             echo "Login successful";
