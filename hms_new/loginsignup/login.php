@@ -83,7 +83,7 @@
             <input type="text" id="email" name="email" required>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
-            <button type="submit">Login</button>
+            <button type="submit" name="submit">Login</button>
         </form>
         <p>Don't have an account? <a href="signup.php">Sign up</a></p>
     </div>

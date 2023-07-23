@@ -1,6 +1,6 @@
 <?php
 
-echo isset($_POST["submit"]; // RL 
+echo isset($_POST["submit"]); // RL 
 echo $_POST["submit"]; // RL
 
 if (isset($_POST["submit"])) {
