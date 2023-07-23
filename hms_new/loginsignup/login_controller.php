@@ -31,6 +31,7 @@ if (isset($_POST["submit"])) {
 
     if ($row = mysqli_fetch_assoc($result)) {
         // Verify the hashed password
+        echo $row['password']; // RL
         if (password_verify($password, $row['password'])) {
             // Login successful
             echo "Login successful";
