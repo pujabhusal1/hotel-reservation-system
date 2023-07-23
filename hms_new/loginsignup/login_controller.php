@@ -26,8 +26,6 @@ if (isset($_POST["submit"])) {
     mysqli_stmt_bind_param($stmt, "ss", $emailOrUsername, $emailOrUsername);
     mysqli_stmt_execute($stmt);
 
-    echo $stmt; // RL
-
     // Get the result
     $result = mysqli_stmt_get_result($stmt);
 
