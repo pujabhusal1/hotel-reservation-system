@@ -1,5 +1,10 @@
 <?php
-	require_once 'admin/connect.php';
+	$host = "localhost";
+    				$user = "root";
+    				$pass = "";
+    				$dbname = "db_hor";
+    				$conn = mysqli_connect($host, $user, $pass, $dbname);
+    				
 	if(ISSET($_POST['add_guest'])){
 		$firstname = $_POST['firstname'];
 		$middlename = $_POST['middlename'];
