@@ -17,7 +17,6 @@
 			<div class = "panel-body">
 				<strong><h3>MAKE A RESERVATION</h3></strong>
 				<?php
-					require_once 'login_controller.php';
 					$query = $conn->query("SELECT * FROM `room` ORDER BY `price` ASC") or die(mysql_error());
 					while($fetch = $query->fetch_array()){
 				?>
