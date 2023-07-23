@@ -1,7 +1,14 @@
 <?php
+
+echo isset($_POST["submit"]; // RL 
+echo $_POST["submit"]; // RL
+
 if (isset($_POST["submit"])) {
     $emailOrUsername = $_POST["email"];
     $password = $_POST["password"];
+
+    echo $emailOrUsername; // RL
+    echo $password; // RL
 
     $host = "localhost";
     $user = "root";
@@ -18,6 +25,8 @@ if (isset($_POST["submit"])) {
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "ss", $emailOrUsername, $emailOrUsername);
     mysqli_stmt_execute($stmt);
+
+    echo $stmt; // RL
 
     // Get the result
     $result = mysqli_stmt_get_result($stmt);
