@@ -1,4 +1,9 @@
 <?php
+
+function isPasswordInValid($passwd) {
+    return true;
+  }
+
 if (isset($_POST["submit"])) {
     $email = $_POST["email"];
     $name = $_POST["username"];
@@ -21,7 +26,12 @@ if (isset($_POST["submit"])) {
     if (mysqli_num_rows($result) > 0) {
         echo "Email or username already exists.";
         echo '<a href="login.php">Go Back to Login</a>';
-    } else {
+    } 
+    else if (isPasswordInValid($password)){
+        echo "Password is invalid. A valid password should contain..";
+
+    }
+    else {
         // Insert the new user's details into the database
         $sql = "INSERT INTO users (email, username, password) VALUES ('$email', '$name', '$password')";
 

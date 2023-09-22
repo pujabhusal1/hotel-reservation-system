@@ -83,9 +83,8 @@
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required minlength="6">
-                <small>(Minimum 6 characters)</small>
-                <div class="error-message" style="color: red;">Password must be at least 6 characters long.</div>
+                <input type="password" id="password" name="password" pattern=".*[^a-zA-Z0-9].*" required minlength="6">
+                <small>(Minimum 6 characters, should have at least one non-alphanumeric character)</small>
             </div>
             <div class="form-group">
                 <a href="login.php" class="go-back-link">Go Back</a>
