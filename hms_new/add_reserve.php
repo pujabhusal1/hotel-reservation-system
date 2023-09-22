@@ -30,15 +30,15 @@
 					<form method = "POST" enctype = "multipart/form-data">
 						<div class = "form-group">
 							<label>Firstname</label>
-							<input type = "text" class = "form-control" name = "firstname" required = "required" maxLength="20"/>
+							<input type = "text" class = "form-control" name = "firstname" required = "required" maxLength="20" onkeydown="return /[a-zA-Z]/i.test(event.key)"/>
 						</div>
 						<div class = "form-group">
 							<label>Middlename</label>
-							<input type = "text" class = "form-control" name = "middlename" required = "required" maxLength="20"/>
+							<input type = "text" class = "form-control" name = "middlename" required = "required" maxLength="20" onkeydown="return /[a-zA-Z]/i.test(event.key)"/>
 						</div>
 						<div class = "form-group">
 							<label>Lastname</label>
-							<input type = "text" class = "form-control" name = "lastname" required = "required" maxLength="20"/>
+							<input type = "text" class = "form-control" name = "lastname" required = "required" maxLength="20" onkeydown="return /[a-zA-Z]/i.test(event.key)"/>
 						</div>
 						<div class = "form-group">
 							<label>Address</label>
