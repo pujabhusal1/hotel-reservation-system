@@ -16,10 +16,22 @@
   <div class="col-sm-12 col-md-6 col-lg-6 col-12">
    <h1>Introduction   </h1>
     <img src="images/elephant.jpg" />
-       <p class="p-2">New View Resorts- Your Home in the Jungle
-        With more than 35 years of experience in wildlife, operating safari l
-        odge in Chitwan National Park area, New view Resorts  is one of 
-        the best resorts of Nepal. Our services & professionalism catering to the needs of our guest have earned us a good reputation along the years among our agents all over the world. Jungle Safari Lodge is an exciting combination of luxury and wildlife adventure in Chitwan National Park….</p>
+       <p class="p-2">Welcome to New View Hotel, your home away from home in Chitwan. We're here to make your stay comfortable, enjoyable, and memorable.
+
+Our rooms are designed with your comfort in mind, featuring cozy beds, modern furnishings, and great views. 
+
+ Need to work? We've got fast Wi-Fi and a business center. 
+
+Explore with nature easily, as we are clode yo the nature it seem good view from the hotel . Our friendly staff is here to help you have a fantastic time.
+
+Choose New View Hotel for a wonderful stay that will leave you with happy memories. Your comfort is our priority, and we can't wait to have you here!
+
+
+
+
+
+
+</p>
 <button type="button" class="btn btn-light mb-5">more</button>
 <div class="accordion" id="accordionExample">
 <div class="accordion-item">
@@ -45,7 +57,7 @@
  Projectors, Sound System
  Screens
  Whiteboard
- Dedicated area for catering
+
  Air Conditions with Backup</strong>OUR SERVICES  or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
 </div>
  </div>

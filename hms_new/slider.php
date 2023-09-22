@@ -13,14 +13,14 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="images/hall.jpg" class="d-block w-100" alt="...">
+            <img src="images/room.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Large hall </h5>
+              <h5>Standard Room </h5>
               <p>You can start your events with great facility</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="images/room.jpg" class="d-block w-100" alt="...">
+            <img src="images/room1.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h5> free wifi and AC</h5>
               <p>Customer can see proper view of nature from the room</p>

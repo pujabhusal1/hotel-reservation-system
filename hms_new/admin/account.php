@@ -5,18 +5,17 @@
 ?>
 <html lang = "en">
 	<head>
-		<title>New View Resorts</title>
+		<title>The New View Hotel</title>
 		<meta charset = "utf-8" />
-
-
-		
-
 		<meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
 		<link rel = "stylesheet" type = "text/css" href = "../css/bootstrap.css " />
 		<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
 	</head>
 <body>
-	
+	<nav style = "background-color:rgba(0, 0, 0, 0.1);" class = "navbar navbar-default">
+		<div  class = "container-fluid">
+			<div class = "navbar-header">
+				<a class = "navbar-brand" >The New View Hotel</a>
 			</div>
 			<ul class = "nav navbar-nav pull-right ">
 				<li class = "dropdown">
@@ -31,9 +30,12 @@
 	<div class = "container-fluid">	
 		<ul class = "nav nav-pills">
 			<li><a href = "home.php">Home</a></li>
+		
+			
 			<li class = "active"><a href = "account.php">Accounts</a></li>
 			<li><a href = "reserve.php">Reservation</a></li>
-			<li><a href = "room.php">Room</a></li>			
+			<li><a href = "room.php">Room</a></li>		
+			<li><a href = "userdata.php">Userdatails</a></li>		
 		</ul>	
 	</div>
 	<br />
@@ -75,7 +77,7 @@
 	<br />
 	<br />
 	<div style = "text-align:right; margin-right:10px;" class = "navbar navbar-default navbar-fixed-bottom">
-		<label>&copy;  </label>
+		<label></label>
 	</div>
 </body>
 <script src = "../js/jquery.js"></script>

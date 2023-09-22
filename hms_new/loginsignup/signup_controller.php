@@ -1,33 +1,38 @@
-
 <?php
+session_start();
+
+$host = "localhost";  // Replace with your database host
+$user = "your_username";  // Replace with your database username
+$pass = "your_password";  // Replace with your database password
+$dbname = "db_hor";  // Replace with your database name
+
+$conn = mysqli_connect($host, $user, $pass, $dbname);
+
+if (!$conn) {
+    die("Database connection failed: " . mysqli_connect_error());
+}
+
 if (isset($_POST["submit"])) {
-    $email = $_POST["email"];
-    $name = $_POST["username"];
-    $password = $_POST["password"];
+    if (isset($_POST["action"]) && $_POST["action"] === "signup") {
+        $email = $_POST["email"];
+        $name = $_POST["username"];
+        $password = $_POST["password"];
 
-    $host = "localhost";
-    $user = "root";
-    $pass = "";
-    $dbname = "db_hor";
+        // Use prepared statements to prevent SQL injection
+        $sql = "INSERT INTO users (email, username, password) VALUES (?, ?, ?)";
+        $stmt = mysqli_prepare($conn, $sql);
+        mysqli_stmt_bind_param($stmt, "sss", $email, $name, $password);
 
-    $conn = mysqli_connect($host, $user, $pass, $dbname);
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
+        if (mysqli_stmt_execute($stmt)) {
+            echo "Signup successful. ";
+            echo '<a href="login.php">Go Back to Login</a>';
+        } else {
+            echo "Signup failed: " . mysqli_error($conn);
+        }
 
-    $sql =
-        "insert into users values('".$email."','".$name."','".$password."')";
-
-    if (mysqli_query($conn, $sql)) {
-        echo "Signup successfull";
-        
-    } else {
-        echo "Signup failed" . mysqli_error($conn);
+        mysqli_stmt_close($stmt);
     }
 }
 
 mysqli_close($conn);
-exit(); // Stop executing the rest of the code
-
-
 ?>

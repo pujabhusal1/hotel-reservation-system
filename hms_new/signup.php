@@ -1,134 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Signup Form</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      padding: 0;
-    }
+    <title>Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('images/5.jpg'); /* Replace with your background image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #111;
+        }
 
-    h2 {
-      color: #333;
-      text-align: center;
-    }
+        .container {
+            background-color: #fff; /* Change to white background color */
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 320px;
+            text-align: center;
+        }
 
-    .error {
-      color: red;
-    }
+        .container h2 {
+            margin-bottom: 20px;
+            color: #000; /* Black text color */
+        }
 
-    #bookNowForm {
-      width: 300px;
-      padding: 20px;
-      border: 1px solid #000;
-      border-radius: 5px;
-      background-color: #f2f2f2;
-    }
+        .form-group label,
+        .form-group input,
+        .go-back-link,
+        button {
+            color: #000; /* Black text color */
+        }
 
-    label {
-      font-weight: bold;
-    }
+        .go-back-link {
+            display: inline-block;
+            background-color: #2196F3; /* Blue background color */
+            color: #fff; /* White text color */
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-right: 10px;
+        }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    input[type="phone"] {
-      padding: 5px;
-      margin-bottom: 20px;
-      width: 100%;
-    }
+        .go-back-link:hover {
+            background-color: #0b7dda; /* Darker blue on hover */
+        }
 
-    input[type="submit"] {
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
+        button[type="submit"] {
+            background-color: #2196F3; /* Blue background color */
+            color: #fff; /* White text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
 
-    input[type="submit"]:hover {
-      background-color: #45a049;
-    }
-  </style>
+        button[type="submit"]:hover {
+            background-color: #0b7dda; /* Darker blue on hover */
+        }
+    </style>
 </head>
 <body>
-  <form id="bookNowForm" onsubmit="validateForm(event)">
-    <h2>Signup</h2>
-    <label for="name">Name:</label>
-    <input type="text" id="name" required><br>
-    <span id="nameError" class="error"></span><br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" required><br>
-    <span id="emailError" class="error"></span><br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" required><br>
-    <span id="passwordError" class="error"></span><br>
-    <label for="phone">Phone:</label>
-    <input type="phone" id="phone" required><br>
-    <span id="phoneError" class="error"></span><br>
-    <input type="submit" value="Signup">
-  </form>
+    <div class="container">
+        <h2>Signup</h2>
+        <form action="signup_controller.php" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required pattern="[A-Z][a-zA-Z]{2,}">
+                <small>(First letter must be capital)</small>
+                <br><br>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="6">
+                <small>(Minimum 6 characters)</small>
+                <div class="error-message" style="color: red;">Password must be at least 6 characters long.</div>
+            </div>
+            <div class="form-group">
+                <a href="login.php" class="go-back-link">Go Back</a>
+                <button type="submit" name="submit">Signup</button>
+            </div>
+        </form>
+    </div>
 
-  <script>
-    function validateForm(event) {
-      event.preventDefault(); // Prevent form submission
-
-      // Reset error messages
-      var errorElements = document.getElementsByClassName("error");
-      for (var i = 0; i < errorElements.length; i++) {
-        errorElements[i].textContent = "";
-      }
-
-      // Get form values
-      var name = document.getElementById("name").value.trim();
-      var email = document.getElementById("email").value.trim();
-      var password = document.getElementById("password").value.trim();
-      var phone = document.getElementById("phone").value.trim();
-
-      // Validate name
-      if (name === "") {
-        document.getElementById("nameError").textContent = "Name is required";
-      }
-
-      // Validate email
-      if (email === "") {
-        document.getElementById("emailError").textContent = "Email is required";
-      } else if (!validateEmail(email)) {
-        document.getElementById("emailError").textContent = "Invalid email format";
-      }
-
-      // Validate password
-      if (password === "") {
-        document.getElementById("passwordError").textContent = "Password is required";
-      }
-
-      // Validate phone
-      if (phone === "") {
-        document.getElementById("phoneError").textContent = "Phone is required";
-      } else if (!validatePhone(phone)) {
-        document.getElementById("phoneError").textContent = "Invalid phone format";
-      }
-
-      // If all fields are valid, submit the form
-      if (name !== "" && email !== "" && password !== "" && phone !== "") {
-        document.getElementById("bookNowForm").submit();
-      }
-    }
-
-    function validateEmail(email) {
-      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
-    }
-
-    function validatePhone(phone) {
-      var phoneRegex = /^\d{10}$/;
-      return phoneRegex.test(phone);
-    }
-  </script>
+    <script>
+        // Your existing JavaScript validation function here
+    </script>
 </body>
 </html>

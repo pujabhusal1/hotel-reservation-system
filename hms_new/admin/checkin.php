@@ -5,7 +5,7 @@
 ?>
 <html lang = "eng">
 	<head>
-		<title>Hotel Online Reservation</title>
+		<title>The New View Resort</title>
 		<meta charset = "utf-8" />
 		<meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
 		<link rel = "stylesheet" type = "text/css" href = "../css/bootstrap.css " />
@@ -15,7 +15,7 @@
 	<nav style = "background-color:rgba(0, 0, 0, 0.1);" class = "navbar navbar-default">
 		<div  class = "container-fluid">
 			<div class = "navbar-header">
-				<a class = "navbar-brand" >Hotel Online Reservation</a>
+				<a class = "navbar-brand" >The New View Resort</a>
 			</div>
 			<ul class = "nav navbar-nav pull-right ">
 				<li class = "dropdown">
@@ -32,7 +32,9 @@
 			<li><a href = "home.php">Home</a></li>
 			<li><a href = "account.php">Accounts</a></li>
 			<li class = "active"><a href = "reserve.php">Reservation</a></li>
-			<li><a href = "room.php">Room</a></li>			
+			<li><a href = "room.php">Room</a></li>		
+				
+			<li><a href = "userdata.php">Userdatails</a></li>		
 		</ul>	
 	</div>
 	<br />
@@ -79,7 +81,7 @@
 							<td><?php echo "<label style = 'color:#ff0000;'>".date("M d, Y", strtotime($fetch['checkin']."+".$fetch['days']."DAYS"))."</label>"?></td>
 							<td><?php echo $fetch['status']?></td>
 							<td><?php if($fetch['extra_bed'] == "0"){ echo "None";}else{echo $fetch['extra_bed'];}?></td>
-							<td><?php echo "Php. ".$fetch['bill'].".00"?></td>
+							<td><?php echo "Rs. ".$fetch['bill'].".00"?></td>
 							<td><center><a class = "btn btn-warning" href = "checkout_query.php?transaction_id=<?php echo $fetch['transaction_id']?>" onclick = "confirmationCheckin(); return false;"><i class = "glyphicon glyphicon-check"></i> Check Out</a></center></td>
 						</tr>
 						<?php
@@ -93,7 +95,7 @@
 	<br />
 	<br />
 	<div style = "text-align:right; margin-right:10px;" class = "navbar navbar-default navbar-fixed-bottom">
-		<label>&copy; Copyright HOR 2017 </label>
+		<label> </label>
 	</div>
 </body>
 <script src = "../js/jquery.js"></script>

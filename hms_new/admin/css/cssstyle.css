@@ -1,0 +1,79 @@
+/* css/cssstyle.css */
+
+/* Optional: Reset default browser styles for tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Style table header */
+  th {
+    background-color: #f2f2f2;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  /* Style table rows */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
+  /* Style table cells */
+  td {
+    padding: 12px;
+  }
+  
+  /* Style the table container */
+  .container {
+    margin: 20px auto;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the table title */
+  h1 {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f2f2f2;
+    margin: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  /* Style the table itself */
+  table {
+    width: 100%;
+  }
+  
+  /* Style the "Add New User" button */
+  .add-user-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .add-user-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the table footer */
+  .footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f2f2f2;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  

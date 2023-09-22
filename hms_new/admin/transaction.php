@@ -40,7 +40,7 @@
 	<div style = "text-align:right; margin-right:10px;" class = "navbar navbar-default navbar-fixed-bottom">
 		<label>Araneta Street, Singcang Bacolod City, 6100 Philippines</label>
 		<br />
-		<label>&copy; Copyright SHOR 2016 </label>
+		<label> </label>
 	</div>
 </body>
 <script src = "../js/jquery.js"></script>
