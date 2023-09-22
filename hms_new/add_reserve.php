@@ -30,23 +30,23 @@
 					<form method = "POST" enctype = "multipart/form-data">
 						<div class = "form-group">
 							<label>Firstname</label>
-							<input type = "text" class = "form-control" name = "firstname" required = "required" />
+							<input type = "text" class = "form-control" name = "firstname" required = "required" maxLength="20"/>
 						</div>
 						<div class = "form-group">
 							<label>Middlename</label>
-							<input type = "text" class = "form-control" name = "middlename" required = "required" />
+							<input type = "text" class = "form-control" name = "middlename" required = "required" maxLength="20"/>
 						</div>
 						<div class = "form-group">
 							<label>Lastname</label>
-							<input type = "text" class = "form-control" name = "lastname" required = "required" />
+							<input type = "text" class = "form-control" name = "lastname" required = "required" maxLength="20"/>
 						</div>
 						<div class = "form-group">
 							<label>Address</label>
-							<input type = "text" class = "form-control" name = "address" required = "required" />
+							<input type = "text" class = "form-control" name = "address" required = "required" maxLength="100"/>
 						</div>
 						<div class = "form-group">
 							<label>Contact No</label>
-							<input type = "text" class = "form-control" name = "contactno" required = "required" />
+							<input type = "number" class = "form-control" name = "contactno" required = "required" maxLength="10"/>
 						</div>
 						<div class = "form-group">
 							<label>Check in</label>
