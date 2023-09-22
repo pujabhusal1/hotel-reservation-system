@@ -77,7 +77,7 @@
             </div>
             <div class="form-group">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required pattern="[A-Z][a-zA-Z]{2,}">
+                <input type="text" id="username" name="username" required pattern="[A-Z][a-zA-Z]{2,}" maxlength="20">
                 <small>(First letter must be capital)</small>
                 <br><br>
             </div>
