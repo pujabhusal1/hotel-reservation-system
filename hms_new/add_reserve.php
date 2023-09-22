@@ -46,7 +46,7 @@
 						</div>
 						<div class = "form-group">
 							<label>Contact No</label>
-							<input type = "number" class = "form-control" name = "contactno" required = "required" maxLength="10"/>
+							<input type = "text" class = "form-control" name = "contactno" required = "required" maxLength="10" onkeydown="return /[0-9]/i.test(event.key)"/>
 						</div>
 						<div class = "form-group">
 							<label>Check in</label>
